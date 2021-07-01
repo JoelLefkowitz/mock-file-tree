@@ -6,6 +6,7 @@ from setuptools import setup
 configuration = {
     "install_requires": [
         "dataclasses",
+        "types-dataclasses",
     ],
     "extras_require": {
         "linters": [
