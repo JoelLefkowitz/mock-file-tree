@@ -68,6 +68,7 @@
     "maxdepth",
     "mkfifo",
     "mknod",
+    "modindex",
     "nargs",
     "noqa",
     "nosec",
@@ -86,6 +87,7 @@
     "pytest",
     "pytz",
     "qthelp",
+    "quickdocs",
     "rcfile",
     "remarkrc",
     "serializinghtml",
@@ -109,3 +111,5 @@
     "yusei"
   ]
 }
+
+
