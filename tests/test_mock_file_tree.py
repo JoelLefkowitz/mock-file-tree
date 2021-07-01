@@ -39,3 +39,10 @@ def test_context_manager() -> None:
         assert os.path.exists("file1")
 
     assert not os.path.exists("file1")
+
+    # We include a test for the safe=True behavior here since it
+    # saves implementing an explicit teardown method to restore
+    # the os module (which our test runners rely on).
+    with MockFileTree(os, tree, safe=True):
+        with pytest.raises(NotImplementedError):
+            os.remove("file1")

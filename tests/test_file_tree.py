@@ -48,7 +48,6 @@ def test_path_exists() -> None:
     assert not tree.path_exists("file2")
 
 
-
 def test_path_isdir() -> None:
     tree = FileTree.from_paths("file1", "dir1/file2")
     assert not tree.path_isdir("file1")
