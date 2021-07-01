@@ -64,6 +64,7 @@
     "lchflags",
     "lefkowitz",
     "letsencrypt",
+    "listdir",
     "maxdepth",
     "mkfifo",
     "mknod",
