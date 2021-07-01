@@ -1,10 +1,11 @@
 import os
+
 import pytest
 from src.file_tree import MockFileTree
 
 
 def test_mocked_builtins() -> None:
-    MockFileTree("file1", "dir1/file2")
+    MockFileTree(os, "file1", "dir1/file2")
 
     assert os.path.exists("file1")
     assert os.path.exists("dir1")
@@ -23,26 +24,12 @@ def test_mocked_builtins() -> None:
 
     assert os.listdir(".") == ["file1", "dir"]
     assert os.listdir("dir") == ["file2"]
-
-
-def test_restore() -> None:
-    tree = MockFileTree("file1")
-    assert os.path.exists("file1")
-
-    tree.restore()
-    assert not os.path.exists("file1")
+    
 
 
 def test_context_manager() -> None:
-    with MockFileTree("file1") as tree:
+    with MockFileTree(os, "file1") as tree:
         assert isinstance(tree, MockFileTree)
         assert os.path.exists("file1")
 
     assert not os.path.exists("file1")
-
-
-def test_safe() -> None:
-    MockFileTree("file1", safe=True)
-
-    with pytest.raises(NotImplementedError):
-        os.remove("file1")
