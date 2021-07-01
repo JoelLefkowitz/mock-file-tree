@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from typing import List
 
 from ..utils.paths import child_paths, path_base, path_from_base
+
 from .exceptions import SubtreeNotFound
 
 

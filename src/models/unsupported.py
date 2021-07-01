@@ -10,7 +10,6 @@ def unsupported(*args: Any, **kwargs: Any) -> NoReturn:
 
 # We can't do this as a loop as we're redefining the variables.
 def block_unsupported(os: Any) -> None:
-    open = unsupported
     os.access = unsupported
     os.chdir = unsupported
     os.chflags = unsupported
