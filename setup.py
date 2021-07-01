@@ -4,6 +4,8 @@ from typing import Any, Dict, List, cast
 from setuptools import setup
 
 configuration = {
+    "packages": ['mock_file_tree'],
+    "package_dir": {'mock_file_tree': 'src'},
     "install_requires": [
         "dataclasses",
         "types-dataclasses",
