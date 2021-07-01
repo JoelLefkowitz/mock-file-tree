@@ -1,0 +1,7 @@
+project: mock-file-tree
+version: 0.1.0
+author: Joel Lefkowitz
+verbose_name: Mock file tree
+html_title: Mock file tree
+github_url: https://github.com/JoelLefkowitz/mock-file-tree
+apidoc_module_dir: src
