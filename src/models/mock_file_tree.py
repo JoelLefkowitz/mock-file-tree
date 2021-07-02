@@ -6,7 +6,7 @@ from types import TracebackType
 from typing import Any, Optional, Type
 
 from .file_tree import FileTree
-from .unsupported import block_unsupported
+from .unsupported import not_implemented, os_path_unsupported, os_unsupported
 
 
 @dataclass
@@ -28,13 +28,17 @@ class MockFileTree:
         self.restore()
 
     def apply(self) -> None:
-        if self.safe:
-            block_unsupported(self.os)
-
         self.os.listdir = self.tree.listdir
         self.os.path.exists = self.tree.path_exists
         self.os.path.isdir = self.tree.path_isdir
         self.os.path.isfile = self.tree.path_isfile
+
+        if self.safe:
+            for i in os_unsupported:
+                setattr(self.os, i, not_implemented)
+
+            for i in os_path_unsupported:
+                setattr(self.os.path, i, not_implemented)
 
     def restore(self) -> None:
         importlib.reload(self.os)

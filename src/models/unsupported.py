@@ -3,40 +3,45 @@
 from typing import Any, NoReturn
 
 
-def unsupported(*args: Any, **kwargs: Any) -> NoReturn:
+def not_implemented(*args: Any, **kwargs: Any) -> NoReturn:
     raise NotImplementedError()
 
 
-# We can't do this as a loop as we're redefining the variables.
-def block_unsupported(os: Any) -> None:
-    os.access = unsupported
-    os.chdir = unsupported
-    os.chflags = unsupported
-    os.chmod = unsupported
-    os.chown = unsupported
-    os.chroot = unsupported
-    os.lchflags = unsupported
-    os.lchmod = unsupported
-    os.lchown = unsupported
-    os.lstat = unsupported
-    os.mkdir = unsupported
-    os.mkfifo = unsupported
-    os.mknod = unsupported
-    os.open = unsupported
-    os.path.getatime = unsupported
-    os.path.getctime = unsupported
-    os.path.getmtime = unsupported
-    os.path.getsize = unsupported
-    os.path.islink = unsupported
-    os.path.ismount = unsupported
-    os.path.lexists = unsupported
-    os.pathconf = unsupported
-    os.readlink = unsupported
-    os.remove = unsupported
-    os.rmdir = unsupported
-    os.scandir = unsupported
-    os.stat = unsupported
-    os.statvfs = unsupported
-    os.truncate = unsupported
-    os.unlink = unsupported
-    os.utime = unsupported
+# Methods that interact with the file system that don't get
+# have mock implementations:
+os_unsupported = [
+    "access",
+    "chdir",
+    "chflags",
+    "chmod",
+    "chown",
+    "chroot",
+    "lchflags",
+    "lchmod",
+    "lchown",
+    "lstat",
+    "mkdir",
+    "mkfifo",
+    "mknod",
+    "open",
+    "pathconf",
+    "readlink",
+    "remove",
+    "rmdir",
+    "scandir",
+    "stat",
+    "statvfs",
+    "truncate",
+    "unlink",
+    "utime",
+]
+
+os_path_unsupported = [
+    "getatime",
+    "getctime",
+    "getmtime",
+    "getsize",
+    "islink",
+    "ismount",
+    "lexists",
+]
