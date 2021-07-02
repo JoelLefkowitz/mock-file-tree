@@ -75,7 +75,7 @@ And to restore the os module:
 mock.restore()
 ```
 
-We would usually call action of replacing methods in the os module as stubbing. However, the standard library refers to such tasks as mocking and so this package conforms to that naming scheme.
+We would usually call the action of replacing methods in the os module as stubbing. However, the standard library refers to such tasks as mocking and so this package conforms to that naming scheme.
 
 You may want to replace the os module with the stubbed methods only and explicitly restrict access to any un-stubbed methods that interact with the file system (analogous to replacing the os module with a fake). This can be achieved by setting the safe parameter:
 
