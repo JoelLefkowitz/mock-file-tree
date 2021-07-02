@@ -88,6 +88,10 @@ with MockFileTree(os, tree, safe=True):
 
 To cover all file system interactions the builtin 'open' function should be unset too.
 
+## Roadmap
+
+In models.unsupported there is a list of methods that interact with the file system that do not yet have mock implementations. Most notable are the methods that add and remove files from the file tree such as 'mkdir' and 'remove'.
+
 ## Tests
 
 To run unit tests and generate a coverage report:
