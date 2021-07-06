@@ -104,6 +104,12 @@ grunt test
 
 This repository's documentation is hosted on [readthedocs][readthedocs].
 
+To use quickdocs to generate a sphinx documentation configuration:
+
+```bash
+grunt docs
+```
+
 ## Tooling
 
 To run linters:
