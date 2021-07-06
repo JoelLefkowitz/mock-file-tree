@@ -9,7 +9,7 @@ sys.path.append("..")
     Sphinx core settings
 """
 project = "mock-file-tree"
-version = "1.1.2"
+version = "1.1.3"
 author = "Joel Lefkowitz"
 master_doc = "index"
 
