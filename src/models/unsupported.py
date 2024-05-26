@@ -1,5 +1,3 @@
-# pylint: disable=invalid-name
-# pylint: disable=unused-variable
 from typing import Any, NoReturn
 
 

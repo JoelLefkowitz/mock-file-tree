@@ -1,7 +1,5 @@
 import os
-
 import pytest
-
 from src.models.file_tree import FileTree
 from src.models.mock_file_tree import MockFileTree
 

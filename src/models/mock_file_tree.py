@@ -1,17 +1,16 @@
-# pylint: disable=invalid-name
-
 import importlib
+from .file_tree import FileTree
+from .unsupported import not_implemented, os_path_unsupported, os_unsupported
 from dataclasses import dataclass
 from types import TracebackType
 from typing import Any, Optional, Type
 
-from .file_tree import FileTree
-from .unsupported import not_implemented, os_path_unsupported, os_unsupported
-
 
 @dataclass
 class MockFileTree:
+    # pylint: disable-next=invalid-name
     os: Any
+
     tree: FileTree
     safe: bool = False
 

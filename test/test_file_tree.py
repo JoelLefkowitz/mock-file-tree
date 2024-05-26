@@ -1,5 +1,4 @@
 import pytest
-
 from src.models.exceptions import SubtreeNotFound
 from src.models.file_tree import FileTree
 
