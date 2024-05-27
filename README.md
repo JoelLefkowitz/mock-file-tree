@@ -8,7 +8,7 @@ A simple interface to mock the os module with a virtual file tree.
 ![Quality](https://img.shields.io/codacy/grade/f1ad5fa4cee24808afa66a5cf812c4ec)
 ![Coverage](https://img.shields.io/codacy/coverage/f1ad5fa4cee24808afa66a5cf812c4ec)
 
-## Installation
+## Installing
 
 ```bash
 pip install mock-file-tree
