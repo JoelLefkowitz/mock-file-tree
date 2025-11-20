@@ -2,7 +2,7 @@
 
 A simple interface to mock the os module with a virtual file tree.
 
-![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/mock-file-tree/review.yml)
+![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/mock-file-tree/review.yaml)
 ![Version](https://img.shields.io/pypi/v/mock-file-tree)
 ![Downloads](https://img.shields.io/pypi/dw/mock-file-tree)
 ![Quality](https://img.shields.io/codacy/grade/f1ad5fa4cee24808afa66a5cf812c4ec)
